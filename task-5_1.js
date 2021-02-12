@@ -1,11 +1,14 @@
-const Account = function (login, email) {
-  this.login = login;
-  this.email = email;
-};
+class Account {
+  constructor({login, email}) {
+    this.login = login;
+    this.email= email;
+}
 
-Account.prototype.getInfo = function() {
-  console.log(`login: ${this.login}, email: ${this.email}`);
-};
+  getInfo() {
+    const accountInfo = console.log(`Login: ${this.login}, Email: ${this.email}`);
+    return accountInfo;
+  }
+}
 
 console.log(Account.prototype.getInfo); // function
 
