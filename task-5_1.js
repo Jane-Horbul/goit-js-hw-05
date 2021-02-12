@@ -4,11 +4,16 @@ class Account {
     this.email= email;
 }
 
-  getInfo() {
-    const accountInfo = console.log(`Login: ${this.login}, Email: ${this.email}`);
-    return accountInfo;
-  }
+  //getInfo() {
+  //  const accountInfo = console.log(`Login: ${this.login}, Email: ${this.email}`);
+  //  return accountInfo;
+  //}
 }
+
+Account.prototype.getInfo = function(){
+  const accountInfo = console.log(`Login: ${this.login}, Email: ${this.email}`);
+  return accountInfo;
+};
 
 console.log(Account.prototype.getInfo); // function
 
